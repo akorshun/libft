@@ -12,9 +12,23 @@
 
 NAME = libft.a
 
-SRCS = srcs/ft_putchar.c srcs/ft_putstr.c \
-		srcs/ft_strcmp.c srcs/ft_strlen.c \
-		srcs/ft_swap.c
+SRCS = srcs/ft_strlcat.c \
+	srcs/ft_strcat.c \
+	srcs/ft_strcpy.c \
+	srcs/ft_putchar.c \
+	srcs/ft_strncmp.c \
+	srcs/ft_strlen.c \
+	srcs/ft_strcmp.c \
+	srcs/ft_strncat.c \
+	srcs/ft_putstr.c \
+	srcs/ft_atoi.c \
+	srcs/ft_strchr.c \
+	srcs/ft_swap.c \
+	srcs/ft_strstr.c \
+	srcs/ft_strdup.c \
+	srcs/ft_strrchr.c \
+	srcs/ft_strlcpy.c \
+	srcs/ft_strncpy.c
 
 OBJECTS = $(SRCS:srcs/%.c=%.o)
 
