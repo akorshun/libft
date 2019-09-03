@@ -6,7 +6,7 @@
 #    By: bsatou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/03 19:32:50 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/03 21:00:59 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,6 +36,7 @@ ft_strcmp.c \
 ft_strcpy.c \
 ft_strdel.c \
 ft_strdup.c \
+ft_strequ.c \
 ft_striter.c \
 ft_striteri.c \
 ft_strlcat.c \
@@ -46,13 +47,13 @@ ft_strmapi.c \
 ft_strncat.c \
 ft_strncmp.c \
 ft_strncpy.c \
+ft_strnequ.c \
 ft_strnew.c \
 ft_strrchr.c \
 ft_strstr.c \
 ft_swap.c \
 ft_tolower.c \
 ft_toupper.c
-
 OBJECTS = $(SRCS:%.c=%.o)
 
 HEADERS = libft.h
