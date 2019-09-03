@@ -6,44 +6,44 @@
 #    By: bsatou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/07/16 18:18:53 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/03 18:26:30 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = srcs/ft_strlcat.c \
-	srcs/ft_strcat.c \
-	srcs/ft_memcpy.c \
-	srcs/ft_strcpy.c \
-	srcs/ft_putchar.c \
-	srcs/ft_toupper.c \
-	srcs/ft_isalpha.c \
-	srcs/ft_strncmp.c \
-	srcs/ft_strlen.c \
-	srcs/ft_strcmp.c \
-	srcs/ft_bzero.c \
-	srcs/ft_strncat.c \
-	srcs/ft_isdigit.c \
-	srcs/ft_memccpy.c \
-	srcs/ft_putstr.c \
-	srcs/ft_atoi.c \
-	srcs/ft_isprint.c \
-	srcs/ft_isascii.c \
-	srcs/ft_memset.c \
-	srcs/ft_tolower.c \
-	srcs/ft_strchr.c \
-	srcs/ft_isalnum.c \
-	srcs/ft_swap.c \
-	srcs/ft_strstr.c \
-	srcs/ft_strdup.c \
-	srcs/ft_strrchr.c \
-	srcs/ft_strlcpy.c \
-	srcs/ft_strncpy.c
+SRCS =	ft_atoi.c \
+		ft_bzero.c \
+		ft_isalnum.c \
+		ft_isalpha.c \
+		ft_isascii.c \
+		ft_isdigit.c \
+		ft_isprint.c \
+		ft_memccpy.c \
+		ft_memcpy.c \
+		ft_memset.c \
+		ft_putchar.c \
+		ft_putstr.c \
+		ft_strcat.c \
+		ft_strchr.c \
+		ft_strcmp.c \
+		ft_strcpy.c \
+		ft_strdup.c \
+		ft_strlcat.c \
+		ft_strlcpy.c \
+		ft_strlen.c \
+		ft_strncat.c \
+		ft_strncmp.c \
+		ft_strncpy.c \
+		ft_strrchr.c \
+		ft_strstr.c \
+		ft_swap.c \
+		ft_tolower.c \
+		ft_toupper.c
 
-OBJECTS = $(SRCS:srcs/%.c=%.o)
+OBJECTS = $(SRCS:%.c=%.o)
 
-HEADERS = includes/
+HEADERS = libft.h
 
 all: $(NAME)
 
