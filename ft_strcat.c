@@ -6,11 +6,11 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 16:29:57 by bsatou            #+#    #+#             */
-/*   Updated: 2019/07/08 16:38:15 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/03 18:33:41 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strcat(char *dest, const char *src)
 {

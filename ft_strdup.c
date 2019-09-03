@@ -6,11 +6,11 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 11:53:15 by bsatou            #+#    #+#             */
-/*   Updated: 2019/07/10 12:17:56 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/03 18:33:57 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *src)
 {
