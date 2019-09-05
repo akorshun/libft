@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/04 18:34:00 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/05 19:09:00 by bsatou           ###   ########.fr       */
+/*   Created: 2019/09/05 19:05:27 by bsatou            #+#    #+#             */
+/*   Updated: 2019/09/05 19:09:18 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(char const *s)
+void	ft_putendl(char const *s)
 {
 	int count;
 
@@ -22,4 +22,5 @@ void	ft_putstr(char const *s)
 		ft_putchar(s[count]);
 		count++;
 	}
+	ft_putchar('\n');
 }
