@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 11:53:15 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/03 18:33:57 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/06 18:46:48 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *src)
 	while (src[src_len] != '\0')
 		src_len++;
 	dest = (char*)malloc(sizeof(*dest) * (src_len + 1));
+	if (!dest)
+		return (NULL);
 	i = 0;
 	while (i < src_len)
 	{

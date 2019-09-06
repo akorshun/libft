@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 18:07:17 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/04 18:08:46 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/06 18:09:48 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		strjoined[i] = s1[i];
 		i++;
 	}
-	i--;
 	while (j < ft_strlen(s2))
 	{
 		strjoined[j + i] = s2[j];
