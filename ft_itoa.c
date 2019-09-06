@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 19:32:57 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/05 21:31:43 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/06 16:49:05 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,23 @@ static char		*ft_itoa_job(int n, int flag, char *res)
 	return (res);
 }
 
+static size_t	ft_nblen(const int n)
+{
+	size_t	i;
+	int		inner_n;
+
+	inner_n = n;
+	if (inner_n < 0)
+		inner_n *= -1;
+	i = 0;
+	while (inner_n > 0)
+	{
+		inner_n /= 10;
+		i++;
+	}
+	return (i);
+}
+
 char			*ft_itoa(int n)
 {
 	char	*res;
@@ -40,7 +57,7 @@ char			*ft_itoa(int n)
 	int		flag;
 
 	flag = 0;
-	i = 0;
+	i = ft_nblen(n);
 	if (n == -2147483648)
 		return ("-2147483648");
 	if (n == 0)
