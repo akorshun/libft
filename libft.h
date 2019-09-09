@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 12:16:54 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/09 16:47:09 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 17:07:51 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl(char const *s);
 void	ft_putendl_fd(char const *s, int fd);
 void	ft_putnbr(int nb);
-void	ft_putnbr_fd(int n, int fd);
+void	ft_putnbr_fd(int nb, int fd);
 void	ft_putstr(char const *s);
 void	ft_putstr_fd(char const *s, int fd);
 char	*ft_strcat(char *dest, const char *src);
@@ -62,6 +62,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strnew(size_t size);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strrev(char *str);
 char	*ft_strstr(const char *haystack, const char *needle);
