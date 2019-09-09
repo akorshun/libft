@@ -6,15 +6,15 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 21:39:17 by bsatou            #+#    #+#             */
-/*   Updated: 2019/07/15 17:30:14 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 15:39:40 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(const char *str)
 {
-	int i;
-	int result;
-	int flag;
+	int					i;
+	unsigned long int	result;
+	int					flag;
 
 	result = 0;
 	i = 0;
@@ -34,7 +34,11 @@ int		ft_atoi(const char *str)
 		result += str[i] - '0';
 		i++;
 	}
+	if ((result > 9223372036854775807 || i > 19) && !flag)
+		return (-1);
+	else if ((result > 9223372036854775807 || i > 19) && flag)
+		return (0);
 	if (flag)
-		result *= -1;
+		return (-1 * (int)result);
 	return (result);
 }
