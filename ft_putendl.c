@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 19:05:27 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/05 19:09:18 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 16:52:12 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl(char const *s)
 	int count;
 
 	count = 0;
+	if (!s || !*s)
+		return ;
 	while (s[count] != '\0')
 	{
 		ft_putchar(s[count]);

@@ -6,7 +6,7 @@
 #    By: bsatou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/09 16:05:32 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/09 16:46:43 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,9 +29,13 @@ SRCS = ft_atoi.c \
 	   ft_memmove.c \
 	   ft_memset.c \
 	   ft_putchar.c \
+	   ft_putchar_fd.c \
 	   ft_putendl.c \
+	   ft_putendl_fd.c \
 	   ft_putnbr.c \
+	   ft_putnbr_fd.c \
 	   ft_putstr.c \
+	   ft_putstr_fd.c \
 	   ft_strcat.c \
 	   ft_strchr.c \
 	   ft_strclr.c \
@@ -60,7 +64,7 @@ SRCS = ft_atoi.c \
 	   ft_strtrim.c \
 	   ft_swap.c \
 	   ft_tolower.c \
-	   ft_toupper.c \
+	   ft_toupper.c
 
 OBJECTS = $(SRCS:%.c=%.o)
 
