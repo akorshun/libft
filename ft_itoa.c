@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 19:32:57 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/06 18:43:02 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 17:56:46 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,9 +59,9 @@ char			*ft_itoa(int n)
 	flag = 0;
 	i = ft_nblen(n);
 	if (n == -2147483648)
-		return ("-2147483648");
+		return (ft_strdup("-2147483648"));
 	if (n == 0)
-		return ("0");
+		return (ft_strdup("0"));
 	if (n < 0)
 	{
 		flag = 1;
