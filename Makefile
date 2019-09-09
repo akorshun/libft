@@ -6,7 +6,7 @@
 #    By: bsatou <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/09 17:06:50 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/09 19:38:06 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,7 @@ SRCS = ft_atoi.c \
 	   ft_strncpy.c \
 	   ft_strnequ.c \
 	   ft_strnew.c \
+	   ft_strnlen.c \
 	   ft_strnstr.c \
 	   ft_strrchr.c \
 	   ft_strrev.c \
