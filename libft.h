@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 12:16:54 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/09 15:30:17 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 16:06:06 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strrev(char *str);
 char	*ft_strstr(const char *haystack, const char *needle);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s);
 void	ft_swap(int *a, int *b);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
