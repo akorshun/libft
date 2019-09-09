@@ -6,7 +6,7 @@
 /*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 15:41:38 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/09 16:26:35 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/09 20:53:16 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,14 @@ char		*ft_strtrim(char const *s)
 {
 	size_t	start_index;
 	size_t	stop_index;
-	size_t	len;
 	char	*res;
 
-	if (!*s || !s)
-		return ("");
+	if (!s)
+		return (NULL);
+	if (!*s)
+		return ((char *)s);
 	if (ft_isstrspace(s))
-		return ("");
+		return (ft_strdup(""));
 	start_index = 0;
 	stop_index = ft_strlen(s) - 1;
 	while (ft_isspace(s[start_index]))
@@ -54,10 +55,9 @@ char		*ft_strtrim(char const *s)
 			stop_index--;
 	}
 	stop_index++;
-	len = stop_index - start_index;
-	res = ft_strnew(len);
+	res = ft_strnew(stop_index - start_index);
 	if (!res)
 		return (NULL);
-	res = ft_strsub(s, start_index, len);
+	res = ft_strsub(s, start_index, stop_index - start_index);
 	return (res);
 }
