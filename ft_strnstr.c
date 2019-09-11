@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 12:01:16 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/11 17:15:31 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/11 18:34:39 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		j = 0;
 		while (needle[j] == haystack[i + j])
 		{
-			if (j + 1 == ft_strlen(needle) && j + 1 < len - 1)
+			if (j == ft_strlen(needle) - 1 && j + i < len)
 				return ((char*)(haystack + i));
 			j++;
 		}
