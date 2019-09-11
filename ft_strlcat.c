@@ -3,30 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/08 17:44:40 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/09 19:58:58 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/11 16:16:20 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t maxlen)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t srclen;
 	size_t dstlen;
+	size_t srclen;
+	size_t i;
 
+	dstlen = ft_strlen(dst);
 	srclen = ft_strlen(src);
-	dstlen = ft_strnlen(dst, maxlen);
-	if (dstlen == maxlen)
-		return (maxlen + srclen);
-	if (srclen < maxlen - dstlen)
-		ft_memcpy(dst + dstlen, src, srclen + 1);
-	else
+	i = 0;
+	if (size)
 	{
-		ft_memcpy(dst + dstlen, src, maxlen - 1);
-		dst[dstlen + maxlen - 1] = '\0';
+		if (size > dstlen)
+			srclen += dstlen;
+		else
+			srclen += size;
+		while (src[i] && dstlen < (size - 1))
+		{
+			dst[dstlen] = src[i];
+			i++;
+			dstlen++;
+		}
+		dst[dstlen] = '\0';
 	}
-	return (dstlen + srclen);
+	return (srclen);
 }
