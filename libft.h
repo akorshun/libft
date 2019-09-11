@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 12:16:54 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/10 20:44:45 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/11 15:26:12 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,8 @@ void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+char			**ft_strsplit(char const *s, char c);
+size_t			ft_count_words(const char *str, char c);
+size_t			ft_count_letters(const char *str, char c);
 
 #endif

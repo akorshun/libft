@@ -6,7 +6,7 @@
 #    By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/10 20:51:54 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/11 14:41:02 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,10 @@ SRCS =	ft_atoi.c \
 		ft_lstdel.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
-		ft_lstmap.c
+		ft_lstmap.c \
+		ft_strsplit.c \
+		ft_count_words.c \
+		ft_count_letters.c
 
 OBJECTS = $(SRCS:%.c=%.o)
 
