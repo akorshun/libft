@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 20:52:02 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/11 14:00:49 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/11 17:48:59 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,25 @@
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	t_list *new_list;
-	t_list *buf;
 	t_list *start;
+	t_list *list;
 
 	if (!lst || !f)
 		return (NULL);
-	new_list = (t_list*)malloc(sizeof(t_list));
-	if (!new_list)
+	list = f(lst);
+	if (!list)
 		return (NULL);
-	buf = f(lst);
-	new_list = ft_lstnew(buf->content, buf->content_size);
-	if (!new_list)
-		return (NULL);
-	start = new_list;
-	lst = lst->next;
-	while (lst)
+	start = list;
+	while (lst->next)
 	{
-		buf = f(lst);
-		if (ft_lstnew(buf->content, buf->content_size))
-		{
-			new_list = ft_lstnew(buf->content, buf->content_size);
-			new_list = new_list->next;
-		}
 		lst = lst->next;
+		list->next = f(lst);
+		if (!(list->next))
+		{
+			free(list->next);
+			return (NULL);
+		}
+		list = list->next;
 	}
 	return (start);
 }
