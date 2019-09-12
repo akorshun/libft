@@ -6,7 +6,7 @@
 #    By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/11 14:41:02 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/12 16:52:25 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,17 +77,20 @@ SRCS =	ft_atoi.c \
 		ft_count_words.c \
 		ft_count_letters.c
 
-OBJECTS = $(SRCS:%.c=%.o)
+OBJECTS = $(SRCS:.c=.o)
 
 HEADERS = libft.h
 
 all: $(NAME)
 
-$(NAME): $(HEADERS) $(SRCS)
-	gcc -c -Wall -Wextra -Werror $(SRCS) -I $(HEADERS)
+$(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
 clean:
 	rm -f $(OBJECTS)
+	rm -f *.gch
 fclean: clean
 		rm -f $(NAME)
 re: fclean all
+
+%.o: %.c $(HEADERS)
+		gcc -Wall -Wextra -Werror -c $< -o $@
