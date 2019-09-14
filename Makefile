@@ -87,7 +87,6 @@ $(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
 clean:
 	rm -f $(OBJECTS)
-	rm -f *.gch
 fclean: clean
 		rm -f $(NAME)
 re: fclean all
