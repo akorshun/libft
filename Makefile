@@ -6,7 +6,7 @@
 #    By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/12 16:52:25 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/15 19:50:59 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,6 +85,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rc $(NAME) $(OBJECTS)
+	ranlib $(NAME)
 clean:
 	rm -f $(OBJECTS)
 fclean: clean
