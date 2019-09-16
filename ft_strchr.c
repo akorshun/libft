@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsatou <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 18:43:26 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/03 18:43:27 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/16 16:22:08 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char*)(s + i));
 		i++;
 	}
-	if (c == '\0')
+	if (s[i] == '\0' && c == '\0')
 		return ((char*)(s + i));
 	return (NULL);
 }
