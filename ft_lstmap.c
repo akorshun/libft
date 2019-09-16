@@ -6,13 +6,23 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 20:52:02 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/11 18:03:38 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/16 22:03:39 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+static	void	ft_lstdelcontent(void *content, size_t content_size)
+{
+	if (content != NULL)
+	{
+		free(content);
+		content_size = 0;
+	}
+}
+
+
+t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *start;
 	t_list *list;
@@ -29,7 +39,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		list->next = f(lst);
 		if (!(list->next))
 		{
-			free(list->next);
+			ft_lstdel(&start, &ft_lstdelcontent);
 			return (NULL);
 		}
 		list = list->next;
