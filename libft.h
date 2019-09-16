@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 12:16:54 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/16 22:10:32 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/16 22:32:06 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,9 @@ void			ft_swap(int *a, int *b);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 t_list			*ft_lstnew(void const *content, size_t content_size);
+void			ft_lstdelcontent(void *content, size_t content_size);
 void			ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
-void			ft_lstdelcontent(void *content, size_t content_size);
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 char			**ft_strsplit(char const *s, char c);
