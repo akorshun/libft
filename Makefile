@@ -6,7 +6,7 @@
 #    By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/15 12:13:20 by bsatou            #+#    #+#              #
-#    Updated: 2019/09/15 19:50:59 by bsatou           ###   ########.fr        #
+#    Updated: 2019/09/16 22:09:55 by bsatou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,7 @@ SRCS =	ft_atoi.c \
 		ft_toupper.c \
 		ft_lstdelone.c \
 		ft_lstdel.c \
+		ft_lstdelcontent.c \
 		ft_lstadd.c \
 		ft_lstiter.c \
 		ft_lstmap.c \
