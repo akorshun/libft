@@ -6,7 +6,7 @@
 /*   By: bsatou <bsatou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 19:28:41 by bsatou            #+#    #+#             */
-/*   Updated: 2019/09/14 13:51:52 by bsatou           ###   ########.fr       */
+/*   Updated: 2019/09/16 21:44:22 by bsatou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	if (!s || !*s || !f)
 		return (NULL);
 	len = ft_strlen(s);
-	dest = (char*)malloc(sizeof(char) * (len + 1));
-	if (!dest)
+	if (!(dest = ft_strnew(len)))
 		return (NULL);
 	while (i < len)
 	{
