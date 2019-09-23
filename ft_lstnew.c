@@ -31,6 +31,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		if (!new_list->content)
 		{
 			free(new_list->content);
+			new_list->content = NULL;
 			return (NULL);
 		}
 		new_list->content = ft_memcpy(new_list->content, content, content_size);
